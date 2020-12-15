@@ -1,0 +1,131 @@
+* {
+   box-sizing: border-box;  
+}
+
+body {
+    margin: 0;
+    font-family: 'Sen', 'Verdana', 'sans-serif';
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+header {
+    padding: 1rem;
+    position: fixed;
+    background-color: rgba(255,255,255,0.75);
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 991px) {
+    header {
+        width: 100%;
+        box-shadow: 5px 5px 10px black;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    header {
+        width: 400px;
+        height: 100vh;
+        box-shadow: 5px 5px 10px black;
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
+
+header > :not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+header hr {
+    border-top: 1px solid black;
+    border-bottom: 0;
+}
+
+header .header-title {
+    display: flex;
+    align-items: center;
+}
+
+header .header-title h1 {
+    margin: 0;
+    padding: 0;
+}
+
+header .header-title img {
+    width: 45px;
+    height: 45px;
+    box-shadow: 0px 0px 10px black;
+    margin-right: 1rem;
+}
+
+header .header-blogs a {
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: opacity 0.1s linear;
+}
+
+header .header-blogs a:hover {
+    opacity: 0.5;
+}
+
+header .header-networks a {
+    color: black;
+    text-decoration: none;
+    transition: opacity 0.1s linear;
+}
+
+header .header-networks a:hover {
+    opacity: 0.5;
+}
+
+main {
+    background-image: url('../assets/img/ce2bg.jpg');
+    background-size: cover;
+    height: 100vh;
+}
+
+
+main {
+    color: white;
+    padding: 1rem;
+    width: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    main .description {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+}
+
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
